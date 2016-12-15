@@ -61,6 +61,9 @@ public class ModelFragment extends Fragment {
 
                 contents.set(gson.fromJson(reader, BookContents.class));
                 EventBus.getDefault().post(new BookLoadedEvent(getBook()));
+
+                is.close();
+                reader.close();
             }catch (IOException e) {
                 Log.e(getClass().getSimpleName(), "Exception parsing JSON", e);
             }
