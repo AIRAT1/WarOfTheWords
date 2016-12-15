@@ -79,7 +79,7 @@ public class EmPubLiteActivity extends Activity {
 
     @SuppressWarnings("unused")
     @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onBookLoade(BookLoadedEvent event) {
+    public void onBookLoaded(BookLoadedEvent event) {
         setupPager(event.getBook());
     }
 
